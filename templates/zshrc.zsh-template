@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git codecompletions mvn)
 
 # User configuration
 
@@ -58,11 +58,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='vim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -75,6 +75,24 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias vi='vim'
+#bindkey -v 
+
+# vi style incremental search
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward 
+
+# zsh auto cd when dir entered
+setopt AUTO_CD
+
+# add aws-cli to path
+export PATH=$PATH:~/.ec2_cli/eb/macosx/python3/:~/.ec2_cli/api/bin/
+# add docker host
+export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+export M2_HOME=/usr/local/maven
+
+[[ -s "/Users/dennisleon/.gvm/bin/gvm-init.sh" ]] && source "/Users/dennisleon/.gvm/bin/gvm-init.sh"
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh

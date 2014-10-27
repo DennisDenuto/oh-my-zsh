@@ -44,7 +44,9 @@ mvn-color()
 # aliases
 alias mvncie='mvn clean install eclipse:eclipse'
 alias mvnci='mvn clean install'
+alias mci='mvn clean install'
 alias mvncist='mvn clean install -DskipTests'
+alias mcis='mvn clean install -DskipTests'
 alias mvne='mvn eclipse:eclipse'
 alias mvnce='mvn clean eclipse:clean eclipse:eclipse'
 alias mvnd='mvn deploy'
@@ -58,6 +60,7 @@ alias mvn-updates='mvn versions:display-dependency-updates'
 alias mvntc7='mvn tomcat7:run' 
 alias mvntc='mvn tomcat:run'
 alias mvnjetty='mvn jetty:run'
+alias mjr='mvn jetty:run'
 alias mvndt='mvn dependency:tree'
 alias mvns='mvn site'
 alias mvnsrc='mvn dependency:sources'
@@ -103,6 +106,8 @@ function listMavenCompletions {
         dependency:analyze dependency:analyze-dep-mgt dependency:analyze-only dependency:analyze-report dependency:build-classpath dependency:copy dependency:copy-dependencies dependency:get dependency:go-offline dependency:list dependency:purge-local-repository dependency:resolve dependency:resolve-plugins dependency:sources dependency:tree dependency:unpack dependency:unpack-dependencies
         # enforcer
         enforcer:enforce
+        # git-commit-id
+        git-commit-id:revision
         # gpg
         gpg:sign gpg:sign-and-deploy-file
         # help
