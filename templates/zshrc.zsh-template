@@ -88,6 +88,9 @@ bindkey '^N' history-search-forward
 # zsh auto cd when dir entered
 setopt AUTO_CD
 
+# allow comments in terminal
+setopt interactivecomments
+
 # add aws-cli to path
 export PATH=$PATH:~/.ec2_cli/eb/macosx/python3/:~/.ec2_cli/api/bin/
 # add rerun to path
