@@ -84,6 +84,7 @@ bindkey '^R' history-incremental-search-backward
 bindkey '^S' history-incremental-search-forward
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward 
+bindkey \^U backward-kill-line
 
 # zsh auto cd when dir entered
 setopt AUTO_CD
