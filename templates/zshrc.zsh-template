@@ -97,7 +97,8 @@ export PATH=$PATH:~/.ec2_cli/eb/macosx/python3/:~/.ec2_cli/api/bin/
 # add rerun to path
 export PATH=$PATH:~/code/github/public/rerun/rerun/
 # add docker host
-export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+$(boot2docker shellinit 2> /dev/null)
+
 export M2_HOME=/usr/local/maven
 
 [[ -s "/Users/dennisleon/.gvm/bin/gvm-init.sh" ]] && source "/Users/dennisleon/.gvm/bin/gvm-init.sh"
