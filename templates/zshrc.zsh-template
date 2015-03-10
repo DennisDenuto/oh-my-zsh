@@ -78,6 +78,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vi='vim'
 #bindkey -v 
+unset M2_HOME
 
 # vi style incremental search
 bindkey '^R' history-incremental-search-backward
