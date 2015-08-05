@@ -100,8 +100,6 @@ export PATH=$PATH:~/.ec2_cli/eb/macosx/python3/:~/.ec2_cli/api/bin/
 export PATH=$PATH:~/code/github/public/rerun/rerun/
 # add gopath bin to path
 export PATH=$PATH:~/.go/bin
-# add docker host
-$(boot2docker shellinit 2> /dev/null)
 
 [[ -s "`echo $HOME`/.gvm/bin/gvm-init.sh" ]] && source "`echo $HOME`/.gvm/bin/gvm-init.sh"
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
